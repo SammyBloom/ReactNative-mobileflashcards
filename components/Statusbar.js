@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar, View } from "react-native";
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import { appTheme } from "../utils/Helper";
 
 function Statusbar(props) {

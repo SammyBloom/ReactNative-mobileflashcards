@@ -1,7 +1,8 @@
 import React from "react";
 import AddDeck from '../components/AddDeck';
 import { Feather } from "@expo/vector-icons";
-import { createMaterialTopTabNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import {createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import DeckList from '../components/DeckList';
 import { appTheme } from "../utils/Helper";
 

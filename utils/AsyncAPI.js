@@ -1,6 +1,8 @@
 import { Platform } from "react-native";
-import { AsyncStorage } from "@react-native-async-storage/async-storage";
-import { Constants, Notifications, Permissions } from 'expo';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import * as Permissions from 'expo-permissions'
+import Notifications from 'expo-notifications'
+import Constants from 'expo-constants'
 import { appTheme } from '../utils/Helper'; 
 
 export function loadInitialData() {
@@ -85,7 +87,7 @@ export function chkForQuizAttemptedToday() {
 }
 
 export function initiateLocalNotification() {
-    Permissions.askAsync(Permissions.NOTIFICATIONS)
+    Permissions.getAsync(Permissions.NOTIFICATIONS)
         .then(({ status }) => {
             if (Constants.isDevice && status === 'granted') {
                 console.log('Notification permissions granted.')
