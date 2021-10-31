@@ -147,8 +147,8 @@ export function initiateLocalNotification() {
                         );
                         console.log("Notification scheduled successfully!")
 
-                    })
+                    });
             }
 
-        })
+        });
 }
